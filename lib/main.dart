@@ -1,24 +1,19 @@
 import 'package:flutter/material.dart';
 
+import 'chess.dart';
+
 void main() {
-  runApp(const Chess());
+  runApp(const Main());
 }
 
-class Chess extends StatelessWidget {
-  const Chess({super.key});
+class Main extends StatelessWidget {
+  const Main({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Test'),
-        ),
-        body: const Center(
-          child: Text('Test'),
-        ),
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Chess(),
     );
   }
 }
